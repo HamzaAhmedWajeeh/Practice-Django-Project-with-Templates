@@ -1,0 +1,19 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <h1>Enter your text below: </h1>
+    <form method="post" action="counter">
+        {% csrf_token %}
+        <textarea name="text" id="" cols="100" rows="10"></textarea><br>
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>
